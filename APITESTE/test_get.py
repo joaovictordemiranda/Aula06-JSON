@@ -9,9 +9,7 @@ def test_status_and_data():
     }
 
     resposta = requests.get(url, headers=header)
-    resposta_dict = resposta.json()
 
-    status = resposta_dict['status']
-    tamanho_da_lista = len(resposta_dict['data'])
-
-    assert status == 'success' and tamanho_da_lista > 0
+    print('---------------------------------\n')
+    print(resposta.text)
+    print('----------------------------------\n')

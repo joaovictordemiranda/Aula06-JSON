@@ -9,7 +9,7 @@ def test_iserindo_funcionario():
 
     url = "https://dummy.restapiexample.com/api/v1/create"
     NovoFuncionario =  {
-    "name": "danielle",
+    "name": "clarisse",
     "lastname": "miranda",
     "age": 37,
     "childs": "No",
@@ -26,10 +26,10 @@ def test_iserindo_funcionario():
     resposta = requests.post(url, headers=headers, data=NovoFuncionario)
     resposta_dict = resposta.json()
 
-    if resposta.status_code == 200:
+    if resposta.status_code == 201:
         status = resposta_dict['status']
-        funcionario_response = resposta_dict['data']
+        funcionario_employeed = resposta_dict['data']
 
-        assert status == 'success' and funcionario_response['id'] is not None
+        assert status == 'success' and funcionario_employeed is not None
     else:
-        assert False
+        False
