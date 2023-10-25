@@ -12,4 +12,3 @@ def test_status_and_data():
 
     print('---------------------------------\n')
     print(resposta.text)
-    print('----------------------------------\n')
